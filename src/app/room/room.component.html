@@ -12,7 +12,9 @@
   <input #newIntelligence>
 </div>
 
-<button (click)="submitNewPlayer(newName.value, newFitness.value, newIntelligence.value); newName.value=''; newFitness.value=''; newIntelligence.value='';">Submit</button>
+<button (click)="submitNewPlayer(newName.value, newFitness.value, newIntelligence.value); newName.value=''; newFitness.value=''; newIntelligence.value='';">Submit</button><br>
+
+<img src="http://www.officesolutionsinc.com/wp-content/uploads/2013/04/Rent-Office-Cubicles-Charlotte.png"/><br>
 
 <div *ngFor="let person of players | async">
 Welcome in {{person.name}}, you currently have {{person.health}} health points remaining.
