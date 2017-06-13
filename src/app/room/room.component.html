@@ -1,0 +1,23 @@
+<h1>New Player Creation</h1>
+<div>
+  <label>Please enter your name:</label>
+  <input #newName>
+</div>
+<div>
+  <label>Please enter your fitness level (1-10):</label>
+  <input #newFitness>
+</div>
+<div>
+  <label>Please enter your intelligence (1-10):</label>
+  <input #newIntelligence>
+</div>
+
+<button (click)="submitNewPlayer(newName.value, newFitness.value, newIntelligence.value); newName.value=''; newFitness.value=''; newIntelligence.value='';">Submit</button>
+
+Welcome in {{player.name}}, you currently have {{player.health}} health points remaining.
+
+<p>
+  You are sitting in your office at work minding your own business when you suddenly hear a piercing alarm go off.  It appears that the fire alarm has been triggered.  You see the room start to fill up with smoke.  You know that smoke inhalation is bad for your health, and that you have only a limited amount of time to get out of the building.  What do you do?
+</p>
+
+<a (click)="tryDoor(player)">Try the nearest door.</a>
