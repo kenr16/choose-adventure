@@ -6,11 +6,12 @@ import { Player } from '../player.model';
 @Component({
   selector: 'app-door',
   templateUrl: './door.component.html',
-  styleUrls: ['./door.component.css']
+  styleUrls: ['./door.component.css'],
 })
 export class DoorComponent implements OnInit {
 
   playerId: number = null;
+  players: Player[];
 
   constructor(private route: ActivatedRoute, private location: Location) {}
 
