@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RoomComponent } from './room/room.component';
 import { DoorComponent } from './door/door.component';
 import { StairsComponent } from './stairs/stairs.component';
+import { GroundFloorComponent } from './ground-floor/ground-floor.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'stairs/:id',
     component: StairsComponent
+  },
+  {
+    path: 'ground-floor/:id',
+    component: GroundFloorComponent
   }
 
 

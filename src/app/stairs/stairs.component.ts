@@ -24,6 +24,7 @@ export class StairsComponent implements OnInit {
   takeStairs(person) {
     if (person.fitness > 5) {
       alert("You rush down the stairwell and make it out of the building in time!");
+      this.router.navigate(['ground-floor',person.id]);
     }
     else {
       alert("You are just too slow to make it down more than a few flights of stairs, you huff and wheeze and inhale more smoke.  You have lost 1 health due to the smoke.");
@@ -34,6 +35,7 @@ export class StairsComponent implements OnInit {
   takeElevator(person) {
     if (person.intelligence > 5) {
       alert("You grab the firefighter's elevator key from the utility closet and reactivate the elevator.  You lower down to freedom.");
+      this.router.navigate(['ground-floor',person.id]);
     }
     else {
       alert("You rush into the elevator but the buttons don't work.  You have lost 1 health due to the smoke.");

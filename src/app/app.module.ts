@@ -10,6 +10,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { StairsComponent } from './stairs/stairs.component';
+import { GroundFloorComponent } from './ground-floor/ground-floor.component';
 
 
 export const firebaseConfig = {
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     RoomComponent,
     DoorComponent,
-    StairsComponent
+    StairsComponent,
+    GroundFloorComponent
   ],
   imports: [
     BrowserModule,
