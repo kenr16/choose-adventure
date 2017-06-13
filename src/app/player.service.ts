@@ -15,7 +15,13 @@ export class PlayerService {
   }
 
   addPlayer(newPlayer: Player) {
+    this.players.remove();
     this.players.push(newPlayer);
+  }
+
+  updatePlayer(player: Player) {
+    this.players.remove();
+    this.players.push(player);
   }
 
 }
