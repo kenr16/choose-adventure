@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RoomComponent } from './room/room.component';
 import { DoorComponent } from './door/door.component';
+import { StairsComponent } from './stairs/stairs.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const appRoutes: Routes = [
   {
     path: 'door/:id',
     component: DoorComponent
+  },
+  {
+    path: 'stairs/:id',
+    component: StairsComponent
   }
 
 

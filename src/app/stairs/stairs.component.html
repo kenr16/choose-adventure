@@ -1,0 +1,11 @@
+<p>
+  You have made it to the stairwell, unfortunately, we do not have much more time left!  We will need to work quickly to get out of the burning building.  There is a stairwell here and an elevator, but we are 20 floors up.  Taking the stairwell would require some fitness, but we might be able to find a way to force the elevator to work.
+</p>
+
+<div *ngFor="let person of players | async">
+  {{person.name}}, you have {{person.health}} health remaining!<br><br>
+
+<a (click)="takeStairs(person)">Take the stairs.</a><br>
+<a (click)="takeElevator(person)">Try to get the elevator working.</a>
+
+</div>

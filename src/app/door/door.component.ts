@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Player } from '../player.model';
+import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
@@ -17,7 +18,7 @@ export class DoorComponent implements OnInit {
   player = null;
 
 
-  constructor(private route: ActivatedRoute, private location: Location, private playerService: PlayerService) {}
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private playerService: PlayerService) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -39,6 +40,7 @@ export class DoorComponent implements OnInit {
   kickDoor(person) {
     if (person.fitness > 5) {
       alert("The door smashes open!");
+      this.router.navigate(['stairs',person.id]);
 
     }
     else {
@@ -51,7 +53,7 @@ export class DoorComponent implements OnInit {
   pickDoor(person) {
     if (person.intelligence > 5) {
       alert("You successfully pick the lock!");
-      
+      this.router.navigate(['stairs',person.id]);
     }
     else {
       alert("You have jammed up the lock.  You have lost 1 health due to the smoke.");

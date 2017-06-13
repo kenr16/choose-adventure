@@ -9,6 +9,7 @@ import { DoorComponent } from './door/door.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { StairsComponent } from './stairs/stairs.component';
 
 
 export const firebaseConfig = {
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     RoomComponent,
-    DoorComponent
+    DoorComponent,
+    StairsComponent
   ],
   imports: [
     BrowserModule,
